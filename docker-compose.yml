@@ -1,0 +1,10 @@
+web:
+  build: ./web
+  ports:
+    - '8080:8080'
+  command: npm run dev
+  environment:
+    NODE_ENV: development  
+  volumes:
+    - ./web:/home/app/web
+    - ./web/node_modules:/home/app/web/node_modules

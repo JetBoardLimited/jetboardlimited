@@ -1,0 +1,17 @@
+{
+  "name": "jetboardlimited",
+  "version": "0.0.0",
+  "description": "Node.js Web Server",
+  "author": "Jan Karlo Dela Cruz <jankarlo.delacruz@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node_modules/.bin/nodemon index.js"
+  },
+  "dependencies": {
+    "express": "4.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.11.0"
+  }
+}
