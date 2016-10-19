@@ -1,17 +1,35 @@
 {
   "name": "jetboardlimited",
   "version": "0.0.0",
-  "description": "Node.js Web Server",
+  "description": "jetboardlimited.com's web server + site",
   "author": "Jan Karlo Dela Cruz <jankarlo.delacruz@gmail.com>",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "node_modules/.bin/nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "dependencies": {
-    "express": "4.14.0"
+    "body-parser": "1.15.2",
+    "cookie-parser": "1.4.3",
+    "express": "4.14.0",
+    "morgan": "1.7.0",
+    "pug": "2.0.0-beta6",
+    "stylus": "0.54.5"
   },
   "devDependencies": {
     "nodemon": "1.11.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jankdc/jetboardlimited.git"
+  },
+  "keywords": [
+    "jetboardlimited",
+    "website"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jankdc/jetboardlimited/issues"
+  },
+  "homepage": "https://github.com/jankdc/jetboardlimited#readme"
 }
