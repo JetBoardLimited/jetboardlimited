@@ -1,6 +1,6 @@
 {
   "name": "jetboardlimited",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "jetboardlimited.com's web server + site",
   "author": "Jan Karlo Dela Cruz <jankarlo.delacruz@gmail.com>",
   "private": true,
