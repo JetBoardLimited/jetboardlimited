@@ -1,7 +1,6 @@
-#!/usr/bin/env node
 'use strict';
 
-const server = require('../server');
+const server = require('./server');
 const PORT = 8080;
 
 // Start server.
