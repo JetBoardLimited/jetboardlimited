@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "description": "jetboardlimited.com's web server + site",
   "author": "Jan Karlo Dela Cruz <jankarlo.delacruz@gmail.com>",
-  "main": "index.js",
+  "private": true,
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node bin/www",
+    "dev": "node_modules/.bin/nodemon bin/www",
+    "test": "node_modules/.bin/gulp test"
   },
   "dependencies": {
     "body-parser": "1.15.2",
@@ -18,7 +20,11 @@
     "winston": "2.2.0"
   },
   "devDependencies": {
-    "nodemon": "1.11.0"
+    "expect": "1.20.2",
+    "gulp": "3.9.1",
+    "gulp-mocha": "3.0.1",
+    "nodemon": "1.11.0",
+    "supertest": "2.0.1"
   },
   "repository": {
     "type": "git",

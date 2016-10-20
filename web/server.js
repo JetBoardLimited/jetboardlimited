@@ -4,31 +4,47 @@ const express = require('express');
 const stylus = require('stylus');
 const morgan = require('morgan');
 const winston = require('winston');
+const fs = require('fs');
+
 const path = require('path');
 
 // Routers
 const indexRouter = require('./routes/index');
 
 // Express
-const app = express();
-const dev = (app.get('env') === 'development');
+const server = express();
+const dev = (server.get('env') === 'development');
 
-// Setup server log
+// Make the HTML output pretty in development.
+server.locals.pretty = dev;
+
+// Setup morgan logger.
+if (server.get('env') === 'development') {
+    server.use(morgan('dev'));  
+} else if (server.get('env') === 'production') {
+
+    // Create a write stream (in append mode) 
+    const accessLogStream = fs.createWriteStream(
+        path.join(__dirname, 'logs', 'access.log'),
+        { flags: 'a' }
+    );
+
+    server.use(morgan('common', {stream: accessLogStream}));
+}
+
+// Setup winston logger.
 winston.add(winston.transports.File, {
     filename: path.join('logs', 'server.log'),
     handleExceptions: true,
     humanReadableUnhandledException: true
 });
 
-// Make the HTML output pretty in development.
-app.locals.pretty = dev;
-
 // Set template engine to jade/pug.
-app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'views', 'templates'));
+server.set('view engine', 'pug');
+server.set('views', path.join(__dirname, 'views', 'templates'));
 
 // Stylus middleware
-app.use(stylus.middleware({
+server.use(stylus.middleware({
     src: path.join(__dirname, 'public'),
     dest: path.join(__dirname, 'public'),
     compile: (str, path, fn) => {
@@ -39,29 +55,23 @@ app.use(stylus.middleware({
     }
 }));
 
-// REST logger
-app.use(morgan('dev'));
-
 // Set base directory for path requests
-app.use(express.static(path.join(__dirname, 'public')));
+server.use(express.static(path.join(__dirname, 'public')));
 
 // Use indexRouter
-app.use('/', indexRouter);
+server.use('/', indexRouter);
 
 // Error handler: 404 handler
-app.use((req, res, next) => {
+server.use((req, res, next) => {
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
 
 // Error handler: No stacktraces leaked to user production mode.
-app.use((err, req, res, next) => {
+server.use((err, req, res, next) => {
     res.status(err.status || 500);
     res.send(dev ? err : {});
 });
 
-const PORT = 8080;
-app.listen(PORT);
-
-console.log('Running on http://localhost:' + PORT);
+module.exports = server;
