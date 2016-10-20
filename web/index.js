@@ -2,7 +2,8 @@
 
 const express = require('express');
 const stylus = require('stylus');
-const logger = require('morgan');
+const morgan = require('morgan');
+const winston = require('winston');
 const path = require('path');
 
 // Routers
@@ -11,6 +12,13 @@ const indexRouter = require('./routes/index');
 // Express
 const app = express();
 const dev = (app.get('env') === 'development');
+
+// Setup server log
+winston.add(winston.transports.File, {
+    filename: path.join('logs', 'server.log'),
+    handleExceptions: true,
+    humanReadableUnhandledException: true
+});
 
 // Make the HTML output pretty in development.
 app.locals.pretty = dev;
@@ -32,7 +40,7 @@ app.use(stylus.middleware({
 }));
 
 // REST logger
-app.use(logger('dev'));
+app.use(morgan('dev'));
 
 // Set base directory for path requests
 app.use(express.static(path.join(__dirname, 'public')));
