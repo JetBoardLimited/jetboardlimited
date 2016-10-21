@@ -4,6 +4,8 @@ const express = require('express');
 const stylus = require('stylus');
 const morgan = require('morgan');
 const winston = require('winston');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const fs = require('fs');
 
 const path = require('path');
@@ -42,6 +44,15 @@ winston.add(winston.transports.File, {
 // Set template engine to jade/pug.
 server.set('view engine', 'pug');
 server.set('views', path.join(__dirname, 'views', 'templates'));
+
+// Parse application/x-www-form-urlencoded
+server.use(bodyParser.urlencoded({ extended: false }));
+
+// Parse application/json
+server.use(bodyParser.json());
+
+// Parse cookies
+server.use(cookieParser());
 
 // Stylus middleware
 server.use(stylus.middleware({
