@@ -1,9 +1,33 @@
 doctype html
 
 head
-    title JetBoard Limited
-    meta(charset='utf-8')
-    meta(name='description' content='A jetboarding company based in Brighton. We sell, hire and teach jetboards. We also do brand partnerships.')
-
+  title Jetboard Limited
+  meta(charset='utf-8')
+  meta(name='description' content='A jetboarding company based in Brighton. We sell, hire and teach jetboards. We also do brand partnerships.')
+  link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300|Open+Sans")
+  link(rel="stylesheet" href="http://weloveiconfonts.com/api/?family=entypo")
+  link(rel='stylesheet' href='stylesheets/style.css')
 body
-    p Hello world!
+  header#main-header
+    a#main-logo(href='.')
+      img(src='images/company-logo.gif' alt='Missing Logo' height='50px')
+    nav: ul#main-nav
+      li: a.nav-item(href='boards') Boards
+      li: a.nav-item(href='partnerships') Partnerships
+      li: a.nav-item(href='lessons') Lessons
+      li: a.nav-item(href='blog') Blog
+      li: a.nav-item(href='forum') Forum
+      li: a.nav-item(href='about') About
+  main#main-content
+  footer#main-footer
+    #main-share-container
+      p Join Us
+      nav: ul.soc
+        li: a.soc-facebook(href='https://facebook.com')
+        li: a.soc-twitter(href='https://twitter.com')
+        li: a.soc-googleplus(href='https://google.com')
+    #main-small-container
+      ul#main-small
+        li.entypo-phone 01273 737 269
+        li.entypo-location 106 Queens Rd, Brighton
+      p.copyright Copyright © 2016 JetBoard Limited

@@ -7,6 +7,7 @@ const winston = require('winston');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const fs = require('fs');
+const nib = require('nib');
 
 const path = require('path');
 
@@ -56,13 +57,13 @@ server.use(cookieParser());
 
 // Stylus middleware
 server.use(stylus.middleware({
-    src: path.join(__dirname, 'public'),
+    src: path.join(__dirname, 'views'),
     dest: path.join(__dirname, 'public'),
-    compile: (str, path, fn) => {
-        stylus(str)
+    compile: (str, path) => {
+        return stylus(str)
         .set('filename', path)
         .set('compress', true)
-        .render(fn);
+        .use(nib());
     }
 }));
 
