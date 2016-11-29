@@ -1,0 +1,35 @@
+doctype html
+
+head
+  title Jetboard Limited
+  meta(charset='utf-8')
+  meta(name='description' content='A jetboarding company based in Brighton. We sell, hire and teach jetboards. We also do brand partnerships.')
+  link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300|Open+Sans")
+  link(rel="stylesheet" href="http://weloveiconfonts.com/api/?family=entypo")
+  link(rel='stylesheet' href='stylesheets/style.css')
+body
+  header#main-header
+    a#main-logo(href='.')
+      img(src='images/company-logo.gif' alt='Missing Logo' height='50px')
+    nav: ul#main-nav
+      li: a.nav-item(href='boards') Boards
+      li: a.nav-item(href='partnerships') Partnerships
+      li: a.nav-item(href='lessons') Lessons
+      li: a.nav-item(href='blog') Blog
+      li: a.nav-item(href='forum') Forum
+      li: a.nav-item(href='about') About
+  main#main-content
+    block main-content
+  footer#main-footer
+    #main-share-container
+      nav: ul#main-share
+        li: a.nav-item.entypo-facebook(href='https://facebook.com')
+        li: a.nav-item.entypo-twitter(href='https://twitter.com')
+        li: a.nav-item.entypo-gplus(href='https://google.com')
+      p Join our community
+    #main-small-container
+      ul#main-small
+        li.entypo-phone 01273 737 269
+        li.entypo-mail hello@jetboardlimited.com
+        li.entypo-location 106 Queens Rd, Brighton
+      p.copyright Copyright © 2016 JetBoard Limited
