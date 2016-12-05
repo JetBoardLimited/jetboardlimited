@@ -91,10 +91,24 @@ body
   height 750px
   width 100%
   background-image url('/images/main-background.png')
-  background-size 800px, contain
+  background-size 750px, contain
   background-repeat no-repeat
   background-position top 70px right 50px
   padding-top 250px
+  
+  &:after
+    display block
+    position absolute
+    left 0
+    bottom 1.125rem
+    width 100%
+    text-align center
+    font-family 'entypo'
+    font-size 2.7465625rem
+    line-height 3.375rem
+    line-spacing -0.02em
+    content "\e764"
+    color rgb(29, 32, 38)
     
   .intro-title
     font-family 'Lato', sans-serif
@@ -104,5 +118,24 @@ body
     margin 0 0 50px 65px
     
   .intro-buttons
+    display flex
     margin 0 0 0 65px
-
+    
+    > .intro-browse
+      color white
+      background-color rgb(29, 32, 38)
+      width 290px
+      height 90px
+      margin-right 20px
+      text-decoration none
+      font-size 22px
+      line-height 45px
+      font-family 'Futura', sans-serif
+      opacity 0.95
+      
+      &:hover
+        background-color rgb(29*0.5, 32*0.5, 38*0.5)
+        opacity 1.0
+        
+      > p
+        margin-left 20px
