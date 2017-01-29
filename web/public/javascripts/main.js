@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', animateManufacturersList);
 
 function animateIntro() {
     var words = [
-        'sell', 'buy', 'hire', 'discuss'
+        'sell', 'buy', 'hire', 'discuss', 'review'
     ];
 
     var index = 0;
