@@ -41,7 +41,7 @@ body
 #main-share
   display flex
   list-style-type none
-  padding 0 0 20px 0
+  padding 20px 0 20px 0
   margin 0
   justify-content center
 
@@ -162,7 +162,9 @@ body
     line-spacing 1.6875rem
     
 .product-ranges
-  height 800px
+  padding-bottom 50px
+  
+  overflow: hidden
   
   h2
     text-align center
@@ -203,3 +205,71 @@ body
     &:hover
       background-color rgb(29*0.5, 32*0.5, 38*0.5)
       opacity 1.0
+      
+.compare-lessons
+  height 600px
+  background-color #1D2026
+  color white
+  padding-bottom 100px
+  
+  background linear-gradient(rgba(29, 32, 38, 0.78), rgba(29, 32, 38, 0.78)), url('/images/lessons-bg.png')
+  background-position bottom
+  background-size cover
+  background-repeat no-repeat
+  
+  > p
+    text-align center
+    width 800px
+    margin 50px auto 50px auto
+    font-family "Source Sans Pro", Avenir, HelveticaNeue, sans-serif
+    font-size 1.1rem
+  
+  h2
+    text-align center
+    font-family 'Lato', sans-serif
+    font-weight normal
+    padding-top 50px
+    font-size 42px
+    
+  > .comparison-container
+    display flex
+    width 1000px
+    margin 0 auto
+    
+    > .lesson
+      padding 0 40px
+      
+      > .title
+        font-family 'Lato', sans-serif
+        font-size 24px
+        letter-spacing 5px
+      > .price
+        font-family 'Lato', sans-serif
+        font-size 54px
+        margin 20px 0
+      > .description
+        font-family 'Lato', sans-serif
+        font-size 20px
+        line-height 24px
+        
+
+  > .find-out-more
+    display block
+    color white
+    border 4px solid white
+    background-color rgba(29, 32, 38, 0.6)
+    width 282px
+    height 82px
+    text-decoration none
+    text-align center
+    font-size 22px
+    line-height 41px
+    font-family 'Futura', sans-serif
+    opacity 0.95
+    margin 40px auto 0 auto
+    
+    &:hover
+      background-color white
+      opacity 1.0
+      color rgb(29, 32, 38)
+
