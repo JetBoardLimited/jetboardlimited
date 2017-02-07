@@ -24,3 +24,4 @@ function animateManufacturersList() {
         autoplaySpeed: 1000
     });
 }
+
