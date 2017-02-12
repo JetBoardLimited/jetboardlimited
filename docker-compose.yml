@@ -14,11 +14,13 @@ web:
   build: ./web
   ports:
     - 8080:8080
-  command: npm run dev
   links:
     - nodebb
   environment:
-    NODE_ENV: development
+    - DEBUG=jetboardlimited:*
+    - NODE_ENV=development
+    - PORT=8080
   volumes:
     - ./web:/home/app/web
     - ./web/node_modules:/home/app/web/node_modules
+  command: npm run dev
