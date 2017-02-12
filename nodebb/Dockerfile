@@ -15,7 +15,7 @@ RUN useradd --user-group --create-home --shell /bin/false nodebb &&\
   cd $(npm root -g)/npm &&\
   npm install fs-extra  &&\
   sed -i -e s/graceful-fs/fs-extra/ -e s/fs\.rename/fs.move/ ./lib/utils/rename.js &&\
-  npm install -g npm@3.10.9
+  npm install -g npm@4.1.2
 
 # Setup work directory
 ENV HOME=/home/nodebb

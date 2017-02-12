@@ -7,7 +7,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node bin/www",
-    "dev": "nodemon bin/www",
+    "dev": "./node_modules/.bin/nodemon bin/www",
     "test": "gulp test"
   },
   "dependencies": {

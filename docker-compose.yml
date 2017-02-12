@@ -4,6 +4,8 @@ nodebb:
     - 4567:4567
   links:
     - redis
+  environment:
+    - VIRTUAL_HOST=forum.jetboardlimited.local
 
 redis:
   image: redis:3.0.7
@@ -20,7 +22,15 @@ web:
     - DEBUG=jetboardlimited:*
     - NODE_ENV=development
     - PORT=8080
+    - VIRTUAL_HOST=jetboardlimited.local
   volumes:
     - ./web:/home/app/web
     - ./web/node_modules:/home/app/web/node_modules
   command: npm run dev
+
+nginx-proxy:
+  image: jwilder/nginx-proxy
+  ports:
+    - "80:80"
+  volumes:
+    - /var/run/docker.sock:/tmp/docker.sock:ro

@@ -1,10 +1,13 @@
 'use strict';
 
 const router = require('express').Router();
-const proxy = require('express-http-proxy');
 
 router.get('/', (req, res) => {
-    res.render('index');
+    const options = {
+      hostname: req.get('host')
+    };
+
+    res.render('index', options);
 });
 
 router.get('/boards', (req, res) => {
@@ -18,7 +21,5 @@ router.get('/boards/:id', (req, res) => {
 
     res.render('board', options);
 });
-
-router.get('/forum', proxy('//localhost:4567'));
 
 module.exports = router;
