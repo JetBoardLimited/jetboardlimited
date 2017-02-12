@@ -2,7 +2,12 @@ extends layout.pug
 
 block main-content
   .board-navigation
-    p #[span.entypo-home] #[span.entypo-right-open-mini] Boards #[span.entypo-right-open-mini] #{board}
+    span
+      a(href="/"): span.entypo-home
+      span.entypo-right-open-mini
+      a(href="/boards") Boards
+      span.entypo-right-open-mini #{board}
+
   .board-main
     .board-media-gallery
       .board-media-gallery-preview

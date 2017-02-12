@@ -2,7 +2,11 @@ extends layout.pug
 
 block main-content
   .board-navigation
-    p #[span.entypo-home] #[span.entypo-right-open-mini] Boards
+    span
+      a(href="/"): span.entypo-home
+      span.entypo-right-open-mini
+      a(href="/boards") Boards
+
   .board-list
     nav: ul
       li.board-item: a(href="/boards/jetsurf")
