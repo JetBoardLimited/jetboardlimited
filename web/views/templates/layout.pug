@@ -10,19 +10,19 @@ head
   link(rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
   link(rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css")
   link(rel="stylesheet" href="//assets.juicer.io/embed.css" media="all")
-  link(rel='stylesheet' href='stylesheets/style.css')
+  link(rel='stylesheet' href='/stylesheets/style.css')
 
 body
   header#main-header
     a#main-logo(href='.')
-      img(src='images/company-logo.png' alt='Missing Logo' height='50px')
+      img(src='/images/company-logo.png' alt='Missing Logo' height='50px')
     nav: ul#main-nav
-      li: a.nav-item(href='boards') Boards
-      li: a.nav-item(href='partnerships') Partnerships
-      li: a.nav-item(href='lessons') Lessons
-      li: a.nav-item(href='blog') Blog
-      li: a.nav-item(href='forum') Forum
-      li: a.nav-item(href='about') About
+      li: a.nav-item(href='/boards') Boards
+      li: a.nav-item(href='/partnerships') Partnerships
+      li: a.nav-item(href='/lessons') Lessons
+      li: a.nav-item(href='/blog') Blog
+      li: a.nav-item(href='/forum') Forum
+      li: a.nav-item(href='/about') About
   main#main-content
     block main-content
   footer#main-footer
@@ -41,4 +41,4 @@ body
   script(src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js")
   script(src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js")
   script(src="//assets.juicer.io/embed.js")
-  script(src="javascripts/main.js")
+  script(src="/javascripts/main.js")

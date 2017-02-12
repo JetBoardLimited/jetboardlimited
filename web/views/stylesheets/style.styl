@@ -16,6 +16,7 @@ body
   justify-content space-between
   align-items center
   padding 0 50px
+  border-bottom 1px solid #e4e6e8
 
 #main-nav
   display flex
@@ -87,6 +88,15 @@ body
 
     &:before
       color #53B3CB
+
+/***
+ *      ___ _   _ ____  _______  __
+ *     |_ _| \ | |  _ \| ____\ \/ /
+ *      | ||  \| | | | |  _|  \  /
+ *      | || |\  | |_| | |___ /  \
+ *     |___|_| \_|____/|_____/_/\_\
+ *
+ */
 
 .intro
   height 800px
@@ -293,3 +303,95 @@ body
 .referral
   visibility hidden
   background-color #1D2026
+
+/***
+ *      ____   ___    _    ____  ____  ____
+ *     | __ ) / _ \  / \  |  _ \|  _ \/ ___|
+ *     |  _ \| | | |/ _ \ | |_) | | | \___ \
+ *     | |_) | |_| / ___ \|  _ <| |_| |___) |
+ *     |____/ \___/_/   \_\_| \_\____/|____/
+ *
+ */
+
+.board-navigation
+  height 50px
+  font-family 'Lato', sans-serif
+  font-size 20px
+
+  > p
+    padding-left 40px
+
+.board-list
+  width 100%
+  margin 0 auto
+  padding-top 50px
+
+  ul
+    list-style-type none
+    padding 0
+    margin 0
+    display flex
+    flex-wrap wrap
+
+    .board-item
+      width 33%
+      text-align center
+      padding 0 0 100px 0
+
+      > a
+        text-decoration none
+        color black
+        font-family 'Lato', sans-serif
+
+.board-main
+  display flex
+  width 80%
+  margin 0 auto
+
+  .board-media-gallery
+    width 50%
+
+    .board-media-gallery-preview
+      text-align center
+      margin 0 auto
+
+      img
+        text-align center
+        margin 0 auto
+
+    .board-media-gallery-controls
+      margin 40px auto 0 auto
+
+      .item
+        border 1px solid #e4e6e8
+        border-radius 3px
+
+      .slick-slide
+        margin 0 10px
+
+      img
+        text-align center
+        margin 0 auto
+
+  .board-information
+    width 50%
+
+    > *
+      margin-left 20px
+
+    .board-title
+      font-size 42px
+      text-transform capitalize
+      margin 0 20px
+
+    .board-price
+      font-size 32px
+.board-review
+  h2
+    text-align center
+    font-family 'Lato', sans-serif
+    font-size 32px
+    width 400px
+    border-bottom 1px solid #e4e6e8
+    margin 0 auto
+    padding 20px
