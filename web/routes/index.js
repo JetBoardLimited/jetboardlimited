@@ -22,4 +22,8 @@ router.get('/boards/:id', (req, res) => {
     res.render('board', options);
 });
 
+router.get('/lessons', (req, res) => {
+    res.render('lessons');
+});
+
 module.exports = router;
