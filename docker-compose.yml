@@ -29,7 +29,7 @@ web:
   command: npm run dev
 
 nginx-proxy:
-  image: jwilder/nginx-proxy
+  build: ./nginx
   ports:
     - "80:80"
   volumes:
