@@ -14,7 +14,6 @@
     "body-parser": "1.15.2",
     "cookie-parser": "1.4.3",
     "express": "4.14.0",
-    "express-http-proxy": "https://registry.npmjs.org/express-http-proxy/-/express-http-proxy-0.11.0.tgz",
     "morgan": "1.7.0",
     "nib": "1.1.2",
     "pug": "2.0.0-beta6",

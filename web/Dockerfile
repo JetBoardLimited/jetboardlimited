@@ -10,14 +10,13 @@ RUN useradd --user-group --create-home --shell /bin/false app &&\
 
 # Setup work directory
 ENV HOME=/home/app
-COPY package.json npm-shrinkwrap.json $HOME/web/
+COPY package.json $HOME/web/
 RUN chown -R app:app $HOME/*
 
 # Login as app
 # Install dependencies
 USER app
 WORKDIR $HOME/web
-RUN npm install && npm cache clean
 
 # Copy source files
 USER root

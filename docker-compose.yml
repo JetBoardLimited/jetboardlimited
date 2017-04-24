@@ -22,5 +22,4 @@ web:
     - PORT=8080
   volumes:
     - ./web:/home/app/web
-    - ./web/node_modules:/home/app/web/node_modules
   command: npm run dev
