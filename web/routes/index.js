@@ -26,4 +26,8 @@ router.get('/lessons', (req, res) => {
     res.render('lessons');
 });
 
+router.get('/forum', (req, res) => {
+    res.redirect('localhost:4567');
+});
+
 module.exports = router;
