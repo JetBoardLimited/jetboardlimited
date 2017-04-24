@@ -1,5 +1,5 @@
-nodebb:
-  build: ./nodebb
+forum:
+  build: ./forum
   ports:
     - 4567:4567
   links:
