@@ -2,8 +2,8 @@
 
 const router = require('express').Router();
 
-router.get('/', (req, res) => {
-    res.render('index');
+router.get('/forum', (req, res) => {
+    res.redirect('localhost:4567');
 });
 
 module.exports = router;

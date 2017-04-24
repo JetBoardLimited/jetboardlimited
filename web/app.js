@@ -12,6 +12,9 @@ const cookieParser = require('cookie-parser');
 
 // Routers
 const indexRouter = require('./routes/index');
+const forumRouter = require('./routes/forum');
+const boardsRouter = require('./routes/boards');
+const lessonsRouter = require('./routes/lessons');
 
 // Express
 const app = express();
@@ -70,6 +73,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Use indexRouter
 app.use('/', indexRouter);
+app.use('/forum', forumRouter);
+app.use('/boards', boardsRouter);
+app.use('/lessons', lessonsRouter);
 
 // Error handler: 404 handler
 app.use((req, res, next) => {
