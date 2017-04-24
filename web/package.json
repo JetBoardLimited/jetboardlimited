@@ -6,9 +6,9 @@
   "private": true,
   "main": "server.js",
   "scripts": {
-    "start": "node bin/www",
-    "dev": "./node_modules/.bin/nodemon bin/www",
-    "test": "gulp test"
+    "dev": "nodemon bin/www",
+    "test": "gulp test",
+    "start": "node bin/www"
   },
   "dependencies": {
     "body-parser": "1.15.2",
