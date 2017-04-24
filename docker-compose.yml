@@ -15,7 +15,7 @@ web:
   ports:
     - 8080:8080
   links:
-    - nodebb
+    - forum
   environment:
     - DEBUG=jetboardlimited:*
     - NODE_ENV=development
