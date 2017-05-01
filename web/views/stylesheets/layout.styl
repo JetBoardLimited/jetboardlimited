@@ -1,0 +1,90 @@
+@require 'common'
+
+body
+  font-family 'Open Sans', sans-serif
+
+#main-header
+  display block
+  padding 2em
+  background-color: #101215
+
+#main-logo
+  display block
+  text-align center
+  padding 0 0 2em 0
+
+  > img
+    height: 5em 
+
+#main-nav
+  display flex
+  justify-content center
+  font-family 'Lato', sans-serif
+  list-style-type none
+  padding 0
+  margin 0
+
+  li > .nav-item
+    padding 1.5em
+    font-size 1em
+    font-weight 300
+    text-decoration none
+    color white
+    letter-spacing 3px
+
+#main-footer
+  background-color rgb(29, 32, 38)
+
+#main-share-container
+  font-family 'Lato', sans-serif
+  padding 4em 0 1em 0
+  text-align center
+  color black
+
+#main-share
+  display flex
+  list-style-type none
+  padding 0
+  margin 0
+  justify-content center
+
+  > li
+    background-color white
+    margin 0 1em
+    border-radius 2em
+
+    height 4em 
+    width 4em
+    line-height 4em
+
+    > .nav-item
+      text-decoration none
+      color rgb(29, 32, 38)
+      font-size 2em
+
+#main-small-container
+  display flex
+  flex-flow column
+  justify-content space-between
+  font-family 'Lato', sans-serif
+  background-color rgb(29, 32, 38)
+  text-align center
+  padding 1em 0 0 0
+  color white
+
+#main-small
+  display flex
+  list-style-type none
+  margin 0
+  padding 1em 0
+  font-size 1.5em
+
+  > li
+    display flex
+    flex-grow 1
+    justify-content center
+    width 0
+
+    &:before
+      color #53B3CB
+
