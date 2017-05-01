@@ -1,56 +1,56 @@
 @require 'common'
 
- #intro-word
-   color #30343F
-
 .intro
-  height 800px
-  width 100%
+  height 40em
   background-image url('/images/main-background.png')
-  background-size 700px, contain
+  background-size 35em, contain
   background-repeat no-repeat
-  background-position top 70px right 75px
+  background-position center
 
-  &:after
-    display block
-    margin-top 250px
-    width 100%
-    text-align center
-    font-family 'entypo'
-    font-size 2.7465625rem
-    content "\e764"
-    color rgb(29, 32, 38)
+  .intro-plaque-container
+    position: absolute
+    height: 40em
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100% 
 
-  .intro-title
-    font-family 'Lato', sans-serif
-    font-size 80px
-    font-weight 300
-    color rgb(29, 32, 38)
-    margin 0 0 50px 65px
-    padding-top 250px
+    .intro-plaque
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      width: 100%
+      background-color: white
+      padding: 0 0 2em 0
+      border: 1px solid #E6E6E6
 
-  .intro-buttons
-    display flex
-    margin 0 0 0 65px
+      .intro-title
+        font-family 'Lato', sans-serif
+        font-size 3em
+        font-weight 300
+        color #101215
 
-    > .intro-browse
-      color white
-      background-color rgb(29, 32, 38)
-      width 290px
-      height 90px
-      margin-right 20px
-      text-decoration none
-      font-size 22px
-      line-height 45px
-      font-family 'Futura', sans-serif
-      opacity 0.95
+      .intro-buttons
+        display flex
 
-      &:hover
-        background-color rgb(29*0.5, 32*0.5, 38*0.5)
-        opacity 1.0
+        > .intro-browse
+          color white
+          background-color #101215
+          width 12em
+          height 4em
+          margin-right 1em
+          text-decoration none
+          font-size 1.2em
+          line-height 2em
+          font-family 'Futura', sans-serif
+          opacity 0.95
+          text-align: center
 
-      > p
-        margin-left 20px
+          &:hover
+            background-color rgb(29*0.5, 32*0.5, 38*0.5)
+            opacity 1.0
 
 .we-are
   height 550px
@@ -107,7 +107,7 @@
   > .range-browse
     display block
     color white
-    background-color rgb(29, 32, 38)
+    background-color #101215
     width 290px
     height 90px
     text-decoration none
@@ -124,7 +124,7 @@
 
 .compare-lessons
   height 600px
-  background-color #1D2026
+  background-color #101215
   color white
   padding-bottom 100px
 
@@ -187,10 +187,10 @@
     &:hover
       background-color white
       opacity 1.0
-      color rgb(29, 32, 38)
+      color #101215
 
 .community
-  background-color #1D2026
+  background-color #101215
 
   h2
     text-align center
@@ -207,70 +207,4 @@
 
 .referral
   visibility hidden
-  background-color #1D2026
-
-@media (max-width: 1590px)
-  .intro
-    background-size 550px, contain
-
-    .intro-title
-      font-size 65px
-
-@media (max-width: 1280px)
-  .intro
-    height 700px
-    background-size 520px, contain
-
-    &:after
-      margin-top: 220px
-
-    .intro-title
-      font-size 52px
-
-    .intro-buttons
-        .intro-browse
-          width 270px
-          height 70px
-          font-size 19px
-          line-height 35px
-
-  .board-list
-    ul
-      .board-item
-        width 33%
-        img
-          width 120px
-
-  #main-share
-    li
-      height 50px
-      width 50px
-      line-height 50px
-
-      > .nav-item
-        font-size 25px
-
-@media (max-width: 1180px)
-  .intro
-    height 600px
-    background-size 420px, contain
-
-    &:after
-      margin-top: 120px
-
-    .intro-title
-      font-size 48px
-
-    .intro-buttons
-        .intro-browse
-          width 270px
-          height 70px
-          font-size 19px
-          line-height 35px
-
-  .board-list
-    ul
-      .board-item
-        width 50%
-        img
-          width 150px
+  background-color #101215
