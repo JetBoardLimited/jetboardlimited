@@ -1,0 +1,43 @@
+extends ../layout.pug
+
+block custom-scripts
+  script(src="/javascripts/boardItem.js")
+
+block custom-styles
+  link(rel="stylesheet" href="/stylesheets/boardItem.css")
+
+block main-content
+  .board-navigation
+    span
+      a(href="/"): span.entypo-home
+      span.entypo-right-open-mini
+      a(href="/boards") Boards
+      span.entypo-right-open-mini
+      a(href="#") Onean Manta
+
+  .board-main
+    .board-media-gallery
+      .board-media-gallery-preview
+        div.item: img(src="https://www.motosurfnation.com/media/k2/items/cache/8fe3e0f34d3083cba6fe73d62a783d7f_L.jpg" height="500px")
+      .board-media-gallery-controls
+        div.item: img(src="https://www.motosurfnation.com/media/k2/items/cache/8fe3e0f34d3083cba6fe73d62a783d7f_L.jpg" height="100px")
+
+    .board-information
+      h1.board-title Onean Manta
+      p.board-overview The Manta board is very stable and with great buoyancy, and also designed for those wanting a laid back excursion at low speed – it’s maximum speed is 7km/h. The board is 230cm long and 98cm wide, with a volume of 200L and weighs 16kg without the battery. The Blade – this is “coming soon” so we will have to wait to find out more.
+      .addthis_inline_share_toolbox
+
+  #disqus_thread.board-comments
+
+  script.
+    var disqus_config = function () {
+    this.page.url = 'http://localhost:8080/boards/#{board}';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'boards/#{board}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://jetboardlimited.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();

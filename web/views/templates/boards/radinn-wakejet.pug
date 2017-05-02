@@ -1,0 +1,48 @@
+extends ../layout.pug
+
+block custom-scripts
+  script(src="/javascripts/boardItem.js")
+
+block custom-styles
+  link(rel="stylesheet" href="/stylesheets/boardItem.css")
+
+block main-content
+  .board-navigation
+    span
+      a(href="/"): span.entypo-home
+      span.entypo-right-open-mini
+      a(href="/boards") Boards
+      span.entypo-right-open-mini
+      a(href="#") Radinn Wakejet Cruise
+
+  .board-main
+    .board-media-gallery
+      .board-media-gallery-preview
+        div.item: img(src="https://www.motosurfnation.com/media/k2/items/cache/01f1a05053c6242fcfa23075e5b963c1_L.jpg" height="500px")
+      .board-media-gallery-controls
+        div.item: img(src="https://www.motosurfnation.com/media/k2/items/cache/01f1a05053c6242fcfa23075e5b963c1_L.jpg" height="100px")
+
+    .board-information
+      h1.board-title Radinn Wakejet Cruise
+      .board-overview
+        p The Wakejet Cruise has a super stealth-like body of carbonfibre /kevlar and although it can reach speeds of up to 37-46 km/h (23-29mph), it’s silent with close to zero sound. The battery takes 2 hours to charge and will last for about 20-45 minutes depending on how its ridden. The board weighs 29kgs (64 lbs) and when stationary, the board is buoyant for riders weighing up to 130 kg (285 lbs). This enables most riders to start from a complete stand-still.
+
+        p The board is also completely water-proof, so even if submerged it will continue to run as usual. In addition, the removable bindings allow the rider to stand, sit or lie down. Unique Features are numerous. For example, the speed controls are wireless enabling the rider to control the speed remotely. By logging on to the Radinn app, the rider can change the acceleration and max speed to suit their own skills and preferences. It also has a brushless electric motor that increases the sensation of acceleration and speed.  The system monitors itself and for example will recognize if something is ou tof the ordinary – such as abnormal motor temperature or amperage peaks– e.g. as a result of a foreign object entering the jet – in which case it will automatically shut off in order to prevent further damage.
+
+        p The Wakejet Cruise is marketed as tomorrow’s technology, today. With that we cannot argue.
+      .addthis_inline_share_toolbox
+
+  #disqus_thread.board-comments
+
+  script.
+    var disqus_config = function () {
+    this.page.url = 'http://localhost:8080/boards/#{board}';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'boards/#{board}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://jetboardlimited.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();

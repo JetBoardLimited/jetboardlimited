@@ -1,0 +1,51 @@
+extends ../layout.pug
+
+block custom-scripts
+  script(src="/javascripts/boardItem.js")
+
+block custom-styles
+  link(rel="stylesheet" href="/stylesheets/boardItem.css")
+
+block main-content
+  .board-navigation
+    span
+      a(href="/"): span.entypo-home
+      span.entypo-right-open-mini
+      a(href="/boards") Boards
+      span.entypo-right-open-mini
+      a(href="#") Waterwolf MPX-3
+
+  .board-main
+    .board-media-gallery
+      .board-media-gallery-preview
+        div.item: img(src="https://www.motosurfnation.com/media/k2/items/cache/8b6e33345ac8d5ffd9cf0d107a7d9e9d_L.jpg" height="500px")
+      .board-media-gallery-controls
+        div.item: img(src="https://www.motosurfnation.com/media/k2/items/cache/8b6e33345ac8d5ffd9cf0d107a7d9e9d_L.jpg" height="100px")
+
+    .board-information
+      h1.board-title Waterwolf MPX-3
+      .board-overview
+        p The Waterwolf-MPX-3 is the new developed electric powered high-tech surfboard. It combines modern technology with the fascination and simplicity of surfing. With the MPX-3 it’s possible to surf soundless and environment-friendly on lakes and rivers without wind and waves. The Waterwolf MPX-3 is perfect to practice the take-off and to make radical manoeuvres and it gives you the feeling of “snowboarding” on flat water. The Waterwolf offers the following features:
+
+        ul
+          li Newly developed and twice cooled propeller-propulsion-system, optimized for optimal thrust thereby tight turning manoeuvres possible without stall.
+          li High current resistant lithium-ion battery with battery management (BMS) and security system (BSS).
+          li Digital start button and/ or Bluetooth Remote Leash with kill-switch.
+          li LCD-display with battery voltage percentage terms.
+          li Exchangeable battery system with magnetic charging socket.
+      .addthis_inline_share_toolbox
+
+  #disqus_thread.board-comments
+
+  script.
+    var disqus_config = function () {
+    this.page.url = 'http://localhost:8080/boards/#{board}';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'boards/#{board}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://jetboardlimited.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
