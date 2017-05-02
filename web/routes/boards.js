@@ -11,7 +11,7 @@ router.get('/:id', (req, res) => {
       board: req.params.id
     };
 
-    res.render('boardItem', options);
+    res.render('boards/' + options.board, options);
 });
 
 module.exports = router;
