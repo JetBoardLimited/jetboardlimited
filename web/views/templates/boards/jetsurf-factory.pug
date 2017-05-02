@@ -1,0 +1,49 @@
+extends ../layout.pug
+
+block custom-scripts
+  script(src="/javascripts/boardItem.js")
+
+block custom-styles
+  link(rel="stylesheet" href="/stylesheets/boardItem.css")
+
+block main-content
+  .board-navigation
+    span
+      a(href="/"): span.entypo-home
+      span.entypo-right-open-mini
+      a(href="/boards") Boards
+      span.entypo-right-open-mini
+      a(href="#") Jetsurf Factory GP
+
+  .board-main
+    .board-media-gallery
+      .board-media-gallery-preview
+        div.item: img(src="/images/jetboard-surf-fun.png" height="500px")
+        div.item: img(src="/images/jetboard-surf-fun-1.png" height="500px")
+        div.item: img(src="/images/jetboard-surf-fun-2.png" height="500px")
+        div.item: iframe(src="https://www.youtube.com/embed/sK6es51x63k" width="90%" height="500px" frameborder="0")
+      .board-media-gallery-controls
+        div.item: img(src="/images/jetboard-surf-fun.png" height="100px")
+        div.item: img(src="/images/jetboard-surf-fun-1.png" height="100px")
+        div.item: img(src="/images/jetboard-surf-fun-2.png" height="100px")
+        div.item: img(src="/images/video-thumbnail.png" height="100px")
+
+    .board-information
+      h1.board-title Jetsurf Factory GP
+      p.board-overview The Factory GP is the most versatile Jetsurf board to date. Experience great performance in all water conditions whether you are a beginner or a seasoned rider.
+      .addthis_inline_share_toolbox
+
+  #disqus_thread.board-comments
+
+  script.
+    var disqus_config = function () {
+    this.page.url = 'http://localhost:8080/boards/#{board}';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'boards/#{board}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://jetboardlimited.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
