@@ -22,6 +22,12 @@ normalize-css()
 
 .faqs dt, .faqs dd { padding: 0 0 0 3em }
 .faqs dt { font-size:1.5em; color: #9d9d9d; cursor: pointer; height: 2em; line-height: 2em; margin: 0; padding 0; }
-.faqs dd { font-size: 1em; margin: 0; }
+.faqs dd { font-size: 1em; margin: 0 3em 0 0; padding 0; }
 .faqs dt { background: url('http://www.designonslaught.com/files/2012/06/expand-icon.png') no-repeat right}
+.faqs .expanded { color: black; }
 .faqs .expanded { background: url('http://www.designonslaught.com/files/2012/06/expanded-icon.png') no-repeat right}
+
+.faqs
+  dt
+    &:hover
+      color black
