@@ -10,11 +10,25 @@
     letter-spacing 0.5rem
 
   > .partnerships-description
-    padding 0 15rem 5rem 15rem
+    width 50rem
+    margin 0 auto
+
+  background linear-gradient(rgba(29, 32, 38, 0.9), rgba(29, 32, 38, 0.9)), url('/images/partner.jpg')
+  background-size cover
+  background-repeat no-repeat
+  padding-bottom 5rem
+  background-position center
+  color white
+
+  span
+    color white
+
+  a
+    color white
 
 .partnerships
   display flex
-  height 25rem
+  flex-direction column
 
 .partnership-type
   display flex
@@ -22,39 +36,61 @@
   flex-basis: 100%
   flex-direction column
   justify-content center
-  align-items center
+  align-items flex-start
   text-decoration none
-  color white
   font-size 1rem
-  letter-spacing 0.4rem
+
+  ul
+    li
+      color rgb(164, 51, 68)
+      p
+        color black
+
+  h3
+    letter-spacing 0.4rem
 
   small
-    text-align center
     letter-spacing 0.1rem
 
+  header
+    padding-bottom 1rem
+    color white
+    width 100vw
+
+    > *
+      padding-left 2rem
+
   &.sales
-    background linear-gradient(rgba(164, 51, 68, 0.9), rgba(164, 51, 68, 0.9)), url('/images/partner.jpg')
-    background-size cover
-    background-repeat no-repeat
-    &:hover
-      background linear-gradient(rgba(164, 51, 68, 0.5), rgba(164, 51, 68, 0.5)), url('/images/partner.jpg')
+    header
+      background linear-gradient(rgba(164, 51, 68, 0.9), rgba(164, 51, 68, 0.9))
       background-size cover
-      transition background 1000ms linear
+      background-repeat no-repeat
+
+    ul
+      li
+        color rgb(164, 51, 68)
+        p
+          color black
 
   &.seasonal
-    background linear-gradient(rgba(29, 32, 38, 0.9), rgba(29, 32, 38, 0.9)), url('/images/seasonal.jpg')
-    background-size cover
-    background-repeat no-repeat
-    &:hover
-      background linear-gradient(rgba(29, 32, 38, 0.5), rgba(29, 32, 38, 0.5)), url('/images/seasonal.jpg')
+    header
+      background linear-gradient(rgba(29, 32, 38, 0.9), rgba(29, 32, 38, 0.9))
       background-size cover
-      transition background 1000ms linear
+      background-repeat no-repeat
+    ul
+      li
+        color rgb(29, 32, 38)
+        p
+          color black
 
   &.ad-hoc
-    background linear-gradient(rgba(65, 45, 76, 0.9), rgba(65, 45, 76, 0.9)), url('/images/ad-hoc.jpg')
-    background-size cover
-    background-repeat no-repeat
-    &:hover
-      background linear-gradient(rgba(65, 45, 76, 0.5), rgba(65, 45, 76, 0.5)), url('/images/ad-hoc.jpg')
+    header
+      background linear-gradient(rgba(65, 45, 76, 0.9), rgba(65, 45, 76, 0.9))
       background-size cover
-      transition background 1000ms linear
+      background-repeat no-repeat
+
+    ul
+      li
+        color rgb(65, 45, 76)
+        p
+          color black

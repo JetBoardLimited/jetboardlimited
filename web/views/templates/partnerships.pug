@@ -4,23 +4,58 @@ block custom-styles
   link(rel='stylesheet' href='/stylesheets/partnerships.css')
 
 block main-content
-  .home-navigation
-    span
-      a(href="/"): span.entypo-home
-      span.entypo-right-open-mini
-      a(href="/partnerships") Partnerships
-
   header.partnerships-header
+    .home-navigation
+      span
+        a(href="/"): span.entypo-home
+        span.entypo-right-open-mini
+        a(href="/partnerships") Partnerships
     h2.partnerships-title PARTNERSHIPS
-    p.partnerships-description Jetboard Limited can provide packages for any potential partners, in order to use our boards in exchange for promoting our brand. These packages can be tailored to suit your requirements. Curently, you can choose 3 partnerships:
+    p.partnerships-description Jetboard Limited can provide packages for any potential partners, in order to use our boards in exchange for promoting our brand. These packages can be tailored to suit your requirements. Currently, you can choose 3 types of partnerships:
 
-  nav.partnerships
-    a.partnership-type.sales(href='/partnerships/sales')
-      p PARTNER SALES
-      small Sell Jet Board Limited boards and merchandise.
-    a.partnership-type.seasonal(href='/partnerships/seasonal')
-      p SEASONAL PARTNER VENUE
-      small Provide a venue for Jet Board Limited to operate from for an agreed percentage of the profit earned on location.
-    a.partnership-type.ad-hoc(href='/partnerships/ad-hoc')
-      p AD HOC PARTNER VENUE
-      small Earn 10% of lessons performed at your venue.
+  .partnerships
+    .partnership-type.sales
+      header
+        h3 PARTNER SALES
+        small Sell Jet Board Limited boards and merchandise.
+
+      ul
+        li
+          p A Partner Sales partnership is a location that will display Jet Board Limited marketing material as well as sell boards, merchandise and tickets for lessons at a commission.
+        li
+          p Jet Board Limited will provide basic marketing material for free based on size, location and sales potential of the company. Additional and more elaborate marketing materials can be discussed and negotiated, but will incur a cost.
+        li
+          p Partner Sales companies will receive 10% of the total sales price for lessons and hire tickets. These tickets will be issued by Jet Board Limited and will have unique numbers, be valid for 1 year and redeemable at listed and agreed destinations.
+        li
+          p Partner Sales companies will receive 20% of the profit made on all boards and merchandise sales. These boards may be electric or petrol powered. We offer all boards at the moment and all different brands, but our discount and rate is determined by the manufacturers themselves. These prices and deals are forever changing for us so it will be the same for yourselves. There are fantastic new products coming out which should be a huge attraction and we are already securing distribution deals with them.
+        li
+          p Your Company and contact details will be added to our website so potential clients can see who you are, where you are and contact you directly should they wish.
+        li
+          p Any potential Partner Sales companies will need to be vetted and approved and the continuation of the partnership will be dependent on goal and demand performance. Further contractual clauses will be provided once the pertinent partnership process has been triggered.
+
+    .partnership-type.seasonal
+      header
+        h3 SEASONAL PARTNER VENUE
+        small Provide a venue for Jet Board Limited to operate from for an agreed percentage of the profit earned on location.
+      ul
+        li
+          p A Seasonal Partner Venue is a partnership between a waterside venue and Jet Board Limited, where Jet Board Limited provides instructors and boards to remain on site for an agreed season. The Seasonal Partner Venue supplies the location & customers for an agreed percentage of the profit earned.
+        li
+          p The percentage earned is not fixed and it will be determined by the input and contributions by either party.
+        li
+          p No initial financial investment is required for the Instructors nor boards as these will be supplied by Jet Board Limited. The Seasonal Partner Venue will be expected to cover any additional costs over and above the Instructors and boards.
+        li
+          p Generally we would send an instructor or instructors (depending on the size and volume) with Jet Boards to your venue for the busy season.
+        li
+          p Any potential Seasonal Partner Venues will need to be vetted and approved. Further contractual clauses will be provided once the pertinent partnership process has been triggered.
+    .partnership-type.ad-hoc
+      header
+        h3 AD HOC PARTNER VENUE
+        small Earn 10% of lessons performed at your venue.
+      ul
+        li
+          p A Partner Venue is a partnership where Jet Board Limited would use a location on an ad hoc basis to perform hire lessons.
+        li
+          p Partner Venues will receive 10% of the total sales price of the hire lessons performed at the Partner’s venue.
+        li
+          p Any potential Partner Venues will need to be vetted and approved. Further contractual clauses will be provided once the pertinent partnership process has been triggered.
