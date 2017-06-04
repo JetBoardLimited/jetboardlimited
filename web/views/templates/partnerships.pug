@@ -1,2 +1,26 @@
 extends layout.pug
 
+block custom-styles
+  link(rel='stylesheet' href='/stylesheets/partnerships.css')
+
+block main-content
+  .home-navigation
+    span
+      a(href="/"): span.entypo-home
+      span.entypo-right-open-mini
+      a(href="/partnerships") Partnerships
+
+  header.partnerships-header
+    h2.partnerships-title PARTNERSHIPS
+    p.partnerships-description Jetboard Limited can provide packages for any potential partners, in order to use our boards in exchange for promoting our brand. These packages can be tailored to suit your requirements. Curently, you can choose 3 partnerships:
+
+  nav.partnerships
+    a.partnership-type.sales(href='/partnerships/sales')
+      p PARTNER SALES
+      small Sell Jet Board Limited boards and merchandise.
+    a.partnership-type.seasonal(href='/partnerships/seasonal')
+      p SEASONAL PARTNER VENUE
+      small Provide a venue for Jet Board Limited to operate from for an agreed percentage of the profit earned on location.
+    a.partnership-type.ad-hoc(href='/partnerships/ad-hoc')
+      p AD HOC PARTNER VENUE
+      small Earn 10% of lessons performed at your venue.

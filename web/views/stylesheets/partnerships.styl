@@ -1,0 +1,60 @@
+@require 'common'
+
+.partnerships-header
+
+  > .partnerships-title
+    font-family 'Lato', sans-serif
+    font-weight: lighter
+    font-size 2rem
+    text-align: center
+    letter-spacing 0.5rem
+
+  > .partnerships-description
+    padding 0 15rem 5rem 15rem
+
+.partnerships
+  display flex
+  height 25rem
+
+.partnership-type
+  display flex
+  flex-grow 1
+  flex-basis: 100%
+  flex-direction column
+  justify-content center
+  align-items center
+  text-decoration none
+  color white
+  font-size 1rem
+  letter-spacing 0.4rem
+
+  small
+    text-align center
+    letter-spacing 0.1rem
+
+  &.sales
+    background linear-gradient(rgba(164, 51, 68, 0.9), rgba(164, 51, 68, 0.9)), url('/images/partner.jpg')
+    background-size cover
+    background-repeat no-repeat
+    &:hover
+      background linear-gradient(rgba(164, 51, 68, 0.5), rgba(164, 51, 68, 0.5)), url('/images/partner.jpg')
+      background-size cover
+      transition background 1000ms linear
+
+  &.seasonal
+    background linear-gradient(rgba(29, 32, 38, 0.9), rgba(29, 32, 38, 0.9)), url('/images/seasonal.jpg')
+    background-size cover
+    background-repeat no-repeat
+    &:hover
+      background linear-gradient(rgba(29, 32, 38, 0.5), rgba(29, 32, 38, 0.5)), url('/images/seasonal.jpg')
+      background-size cover
+      transition background 1000ms linear
+
+  &.ad-hoc
+    background linear-gradient(rgba(65, 45, 76, 0.9), rgba(65, 45, 76, 0.9)), url('/images/ad-hoc.jpg')
+    background-size cover
+    background-repeat no-repeat
+    &:hover
+      background linear-gradient(rgba(65, 45, 76, 0.5), rgba(65, 45, 76, 0.5)), url('/images/ad-hoc.jpg')
+      background-size cover
+      transition background 1000ms linear
