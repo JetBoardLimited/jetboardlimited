@@ -15,12 +15,19 @@ body
   header#main-header
     a#main-logo(href='/')
       img(src='/images/company-logo.png' alt='Missing Logo')
-    nav: ul#main-nav
-      li: a.nav-item(href='/boards') BOARDS
-      li: a.nav-item(href='/lessons') LESSONS
-      li: a.nav-item(href='/partnerships') PARTNERSHIPS
-      li: a.nav-item(href='/forum') FORUM
-      li: a.nav-item(href='/about') ABOUT
+    nav#main-nav
+      ul
+        li: a.nav-item(href='/') HOME
+        li: a.nav-item(href='/boards') BOARDS
+        li: a.nav-item(href='/lessons') LESSONS
+        li: a.nav-item(href='/partnerships') PARTNERSHIPS
+        li: a.nav-item(href='/country') COUNTRY
+        li: a.nav-item(href='/forum') FORUM
+        li: a.nav-item(href='/under-construction') CONTACT US
+        li: a.nav-item(href='/about') ABOUT
+      div.search-box
+        input(type='text' placeholder='Search')
+        a.entypo-search(href='/under-construction')
   main#main-content
     block main-content
   footer#main-footer
