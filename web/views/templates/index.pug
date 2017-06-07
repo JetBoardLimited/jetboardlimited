@@ -7,23 +7,24 @@ block custom-styles
   link(rel='stylesheet' href='/stylesheets/index.css')
 
 block main-content
-  .intro
-    .intro-plaque-container
-      .intro-plaque
-        header
-          h1.intro-title We #[strong#intro-word sell] Jetboards
-        .intro-buttons
-          a.intro-browse(href="boards"): p Browse Our Boards
+  header.intro
+    h1.intro-title We #[strong#intro-word sell] Jetboards
+    .intro-boards-gallery
+      .boards: img(src="images/main-background.png" height="500px")
+      .boards: img(src="images/main-background-1.png" height="500px")
+      .boards: img(src="images/main-background-2.jpg" height="500px")
+    a.intro-browse(href="boards"): p View Our Jet Boards
+
   .we-are
     header
-      h2 We're a jetboarding specialist company...
+      h2 We're a jetboarding specialist company
 
     p The Jet Board Limited team are jet boarders that ride the boards, test the boards, break the boards, review the boards, hire the boards and sell the boards but most of all we just love jet boarding. We are passionate about the whole industry and lifestyle. We are excited about where jet boarding is going and we are proud to play an instrumental role in helping to take the motosurf sport to the next level.
-    p Because we have a great network in the motosurf industry as we are often one of the first to find out about any new jet boards that are coming to the market. Jet Board Limited have always worked with and welcomed all and any new designers, manufacturers and brands, and we will continue to do so as we are proud to play our part in the growth of the motosurf industry.
+    p Because we have a great network in the motosurf industry, we are often one of the first to find out about any new jet boards that are coming to the market. Jet Board Limited have always worked with and welcomed all and any new designers, manufacturers and brands, and we will continue to do so as we are proud to play our part in the growth of the motosurf industry.
 
   .product-ranges
     header
-      h2 Our Board Range
+      h2 Jet Board Brands
     .manufacturers
       .manufacturer: img(src="images/radinn-logo.jpg" height="100px")
       .manufacturer: img(src="images/lampuga-logo.png" height="100px")
@@ -32,24 +33,27 @@ block main-content
       .manufacturer: img(src="images/waterwolf-logo.png" height="100px")
     p We cover both electric and petrol powered engines. Some of the main new brands we deal with are shown above.
 
-    a.range-browse(href="boards"): p Browse Our Selection
+    a.intro-browse(href="boards"): p View Our Jet Boards
   .compare-lessons
     header
       h2 Lessons
 
-    p We hire out our jet boards for anyone who wants try them out. We have a range of lessons depending on your needs.
+    p Would you like to try out one of our Jet Boards? We have a range of options depending on your needs.
 
     .comparison-container
       .lesson.starter
         h3.title.entypo-paper-plane STARTER
-        p.price £100
+        p.price 1 Hour
+        p.price £150
         p.description First time users wanting to experience a Jet Board or a Jet Surf Board.
       .lesson.advanced
         h3.title.entypo-rocket ADVANCE
+        p.price 2 Hour
         p.price £250
         p.description Recommended if you want to purchase a Jet Board or a Jet Surf Board.
       .lesson.ultimate
         h3.title.entypo-flash ULTIMATE
+        p.price 6 Hour
         p.price £600
         p.description The Ultimate Experience - 6 hours including training and time in the water.
 

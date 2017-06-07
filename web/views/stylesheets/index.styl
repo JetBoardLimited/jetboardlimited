@@ -1,60 +1,41 @@
 @require 'common'
 
-.intro
-  height 40em
-  background-image url('/images/main-background.png')
-  background-size 35em, contain
-  background-repeat no-repeat
-  background-position center
+.intro-plaque
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  min-width: 1080px;
+  width: 100%
+  height: 40rem
+  background-color: white
+  padding: 0 0 2em 0
 
-  .intro-plaque-container
-    position: absolute
-    height: 40em
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    min-width: 1080px;
-    width: 100%
+.intro-title
+  text-align center
+  font-family 'Lato', sans-serif
+  font-size 3em
+  font-weight 300
+  color #101215
 
-    .intro-plaque
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
-      min-width: 1080px;
-      width: 100%
-      background-color: white
-      padding: 0 0 2em 0
-      border: 1px solid #E6E6E6
+.intro-browse
+  display flex
+  color white
+  justify-content center
+  align-items center
+  background-color #101215
+  width 18rem
+  height 6rem
+  margin 2rem auto
+  text-decoration none
+  font-size 1.4em
+  font-family 'Futura', sans-serif
+  opacity 0.95
+  text-align center
 
-      .intro-title
-        font-family 'Lato', sans-serif
-        font-size 3em
-        font-weight 300
-        color #101215
-
-      .intro-buttons
-        display flex
-
-        > .intro-browse
-          display flex
-          color white
-          justify-content center
-          align-items center
-          background-color #101215
-          width 12em
-          height 4em
-          margin-right 1em
-          text-decoration none
-          font-size 1.2em
-          font-family 'Futura', sans-serif
-          opacity 0.95
-          text-align: center
-
-          &:hover
-            background-color rgb(29*0.5, 32*0.5, 38*0.5)
-            opacity 1.0
+  &:hover
+    background-color rgb(29*0.5, 32*0.5, 38*0.5)
+    opacity 1.0
 
 .we-are
   height 34em
