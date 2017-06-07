@@ -10,7 +10,7 @@ function animateIntro() {
     }
 
     var words = [
-        'sell', 'buy', 'hire', 'discuss', 'review'
+        'sell', 'buy', 'hire', 'review'
     ];
 
     var index = 0;
