@@ -17,6 +17,7 @@ const boardsRouter = require('./routes/boards');
 const lessonsRouter = require('./routes/lessons');
 const aboutRouter = require('./routes/about');
 const partnershipsRouter = require('./routes/partnerships');
+const underConstructionRouter = require('./routes/underConstruction');
 
 // Express
 const app = express();
@@ -80,6 +81,7 @@ app.use('/about', aboutRouter);
 app.use('/boards', boardsRouter);
 app.use('/lessons', lessonsRouter);
 app.use('/partnerships', partnershipsRouter);
+app.use('/under-construction', underConstructionRouter);
 
 // Error handler: 404 handler
 app.use((req, res, next) => {
