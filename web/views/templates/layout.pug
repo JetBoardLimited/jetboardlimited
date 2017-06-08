@@ -26,7 +26,7 @@ body
         li: a.nav-item(href='/under-construction') CONTACT US
         li: a.nav-item(href='/about') ABOUT
       .search-box
-        input(type='text' placeholder='Search')
+        input(type='text' placeholder='Search' onkeydown="if (event.keyCode == 13) { window.location.href = '/under-construction'; }")
         a.entypo-search(href='/under-construction')
   main#main-content
     .motosurf-logo: a(href='https://www.motosurfnation.com' target='_blank')
