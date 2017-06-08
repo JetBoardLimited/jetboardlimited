@@ -25,10 +25,12 @@ body
         li: a.nav-item(href='/forum') FORUM
         li: a.nav-item(href='/under-construction') CONTACT US
         li: a.nav-item(href='/about') ABOUT
-      div.search-box
+      .search-box
         input(type='text' placeholder='Search')
         a.entypo-search(href='/under-construction')
   main#main-content
+    .motosurf-logo: a(href='https://www.motosurfnation.com' target='_blank')
+      img(src='https://www.motosurfnation.com/images/logo.png' height='75px')
     block main-content
   footer#main-footer
     #main-share-container
