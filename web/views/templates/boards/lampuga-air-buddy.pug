@@ -1,0 +1,42 @@
+extends ../layout.pug
+
+block custom-scripts
+  script(src="/javascripts/boardItem.js")
+
+block custom-styles
+  link(rel="stylesheet" href="/stylesheets/boardItem.css")
+
+block main-content
+  .home-navigation
+    span
+      a(href="/"): span.entypo-home
+      span.entypo-right-open-mini
+      a(href="/boards") Boards
+      span.entypo-right-open-mini
+      a(href="#") Lampuga Air Buddy
+
+  .board-main
+    .board-media-gallery
+      .board-media-gallery-preview
+        div.item: img(src="/images/lampuga-buddy-white.jpg" height="500px")
+      .board-media-gallery-controls
+        div.item: img(src="/images/lampuga-buddy-white.jpg" height="100px")
+
+    .board-information
+      h1.board-title Lampuga Air Buddy
+      p.board-overview The Lampuga Air is the flexible jetboard revolution consisting of two elements: the inflatable hull and the Powerbox containing battery, motor, and fins. This innovative design makes the Lampuga Air light (32 kg / 66 lb) and very easy to use. Deflated, the Lampuga Air fits into the trunk of any car. It is powered by a 15 horsepower engine and can reach speeds of 47 km/h (29 mph). The battery takes max. 120 minutes to charge and lasts up to 40 minutes in the water depending on how it is ridden. The Powerbox can be easily combined with different hulls: Air, Air Plus, and Buddy.
+
+  #disqus_thread.board-comments
+
+  script.
+    var disqus_config = function () {
+    this.page.url = 'http://localhost:8080/boards/#{board}';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'boards/#{board}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://jetboardlimited.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
