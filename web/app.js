@@ -12,7 +12,6 @@ const cookieParser = require('cookie-parser');
 
 // Routers
 const indexRouter = require('./routes/index');
-const forumRouter = require('./routes/forum');
 const boardsRouter = require('./routes/boards');
 const lessonsRouter = require('./routes/lessons');
 const aboutRouter = require('./routes/about');
@@ -76,7 +75,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Use indexRouter
 app.use('/', indexRouter);
-app.use('/forum', forumRouter);
 app.use('/about', aboutRouter);
 app.use('/boards', boardsRouter);
 app.use('/lessons', lessonsRouter);
