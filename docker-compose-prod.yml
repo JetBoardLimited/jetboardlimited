@@ -1,0 +1,11 @@
+version: "2.0"
+
+services:
+  forum:
+    environment:
+      - NODE_ENV=production
+
+  web:
+    environment:
+      - NODE_ENV=production
+    command: npm run dev

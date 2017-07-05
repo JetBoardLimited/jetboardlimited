@@ -1,0 +1,14 @@
+version: "2.0"
+
+services:
+  forum:
+    environment:
+      - NODE_ENV=development
+
+  web:
+    environment:
+      - DEBUG=jetboardlimited:*
+      - NODE_ENV=development
+    volumes:
+      - ./web:/home/app/web
+    command: npm run dev
