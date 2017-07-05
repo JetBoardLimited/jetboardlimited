@@ -10,5 +10,5 @@ services:
       - DEBUG=jetboardlimited:*
       - NODE_ENV=development
     volumes:
-      - ./web:/home/app/web
+      - ./web:/node
     command: npm run dev

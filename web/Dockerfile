@@ -1,23 +1,6 @@
-FROM node:6.8.0
+FROM node:6.9-alpine
 
-# Create new user
-# https://github.com/npm/npm/issues/13306
-RUN useradd --user-group --create-home --shell /bin/false app &&\
-  cd $(npm root -g)/npm &&\
-  npm install fs-extra  &&\
-  sed -i -e s/graceful-fs/fs-extra/ -e s/fs\.rename/fs.move/ ./lib/utils/rename.js &&\
-  npm install -g npm@4.1.2
-
-# Setup work directory
-ENV HOME=/home/app
-COPY package.json $HOME/web/
-RUN chown -R app:app $HOME/*
-
-# Login as app
-# Install dependencies
-USER app
-WORKDIR $HOME/web
-
-# Copy source files
-USER root
-COPY . $HOME/web/
+WORKDIR /node
+COPY package.json ./
+RUN npm install && npm cache clean
+COPY . .
