@@ -7,8 +7,6 @@ const stylus = require('stylus');
 const morgan = require('morgan');
 const express = require('express');
 const winston = require('winston');
-const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
 
 // Routers
 const indexRouter = require('./routes/index');
