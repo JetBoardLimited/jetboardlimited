@@ -49,15 +49,6 @@ winston.add(winston.transports.File, {
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views', 'templates'));
 
-// Parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
-
-// Parse application/json
-app.use(bodyParser.json());
-
-// Parse cookies
-app.use(cookieParser());
-
 // Stylus middleware
 app.use(stylus.middleware({
     src: path.join(__dirname, 'views'),
