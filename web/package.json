@@ -7,7 +7,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon bin/www",
-    "test": "gulp test",
+    "test": "mocha tests/**/*.js",
     "start": "pm2 start bin/www"
   },
   "dependencies": {
@@ -22,8 +22,7 @@
   },
   "devDependencies": {
     "expect": "1.20.2",
-    "gulp": "3.9.1",
-    "gulp-mocha": "3.0.1",
+    "mocha": "3.4.2",
     "nodemon": "1.11.0",
     "pm2": "2.5.0",
     "supertest": "2.0.1"
