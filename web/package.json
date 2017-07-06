@@ -8,11 +8,13 @@
   "scripts": {
     "dev": "nodemon bin/www",
     "test": "mocha tests/**/*.js",
+    "build": "mkdirp logs",
     "start": "pm2 start bin/www"
   },
   "dependencies": {
     "express": "4.14.0",
     "morgan": "1.7.0",
+    "mkdirp": "0.5.1",
     "nib": "1.1.2",
     "pug": "2.0.0-beta6",
     "stylus": "0.54.5",
