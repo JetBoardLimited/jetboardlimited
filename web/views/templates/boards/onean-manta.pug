@@ -1,4 +1,4 @@
-extends ../layout.pug
+extends ./board-layout.pug
 
 block custom-scripts
   script(src="/javascripts/boardItem.js")
@@ -6,7 +6,7 @@ block custom-scripts
 block custom-styles
   link(rel="stylesheet" href="/stylesheets/boardItem.css")
 
-block main-content
+block board-content
   .home-navigation
     span
       a(href="/"): span.entypo-home
@@ -26,18 +26,3 @@ block main-content
       h1.board-title Onean Manta
       p.board-overview The Manta board is very stable and with great buoyancy, and also designed for those wanting a laid back excursion at low speed – it’s maximum speed is 7km/h. The board is 230cm long and 98cm wide, with a volume of 200L and weighs 16kg without the battery. The Blade – this is “coming soon” so we will have to wait to find out more.
       .addthis_inline_share_toolbox
-
-  #disqus_thread.board-comments
-
-  script.
-    var disqus_config = function () {
-    this.page.url = 'http://localhost:8080/boards/#{board}';  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = 'boards/#{board}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://jetboardlimited.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();

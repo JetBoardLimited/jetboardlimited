@@ -8,4 +8,6 @@ services:
   web:
     environment:
       - NODE_ENV=production
+      - DISQUS_URL=https://jetboardlimited.disqus.com/embed.js
+      - SERVER_HOST_URL=https://jetboardlimited.com
     command: npm run dev

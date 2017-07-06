@@ -1,12 +1,6 @@
-extends ../layout.pug
+extends ./board-layout.pug
 
-block custom-scripts
-  script(src="/javascripts/boardItem.js")
-
-block custom-styles
-  link(rel="stylesheet" href="/stylesheets/boardItem.css")
-
-block main-content
+block board-content
   .home-navigation
     span
       a(href="/"): span.entypo-home
@@ -34,18 +28,3 @@ block main-content
           li LCD-display with battery voltage percentage terms.
           li Exchangeable battery system with magnetic charging socket.
       .addthis_inline_share_toolbox
-
-  #disqus_thread.board-comments
-
-  script.
-    var disqus_config = function () {
-    this.page.url = 'http://localhost:8080/boards/#{board}';  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = 'boards/#{board}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://jetboardlimited.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();

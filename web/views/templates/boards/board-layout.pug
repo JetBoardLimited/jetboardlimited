@@ -1,0 +1,27 @@
+extends ../layout.pug
+
+block custom-scripts
+  script(src="/javascripts/boardItem.js")
+
+block custom-styles
+  link(rel="stylesheet" href="/stylesheets/boardItem.css")
+
+block main-content
+  block board-content
+
+  #disqus_thread.board-comments
+
+  script.
+    var disqus_config = function () {
+      // Replace PAGE_URL with your page's canonical URL variable
+      this.page.url = '#{serverHostUrl}/boards/#{board}';  
+      // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.identifier = 'boards/#{board}'; 
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = '#{disqusUrl}';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
