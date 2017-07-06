@@ -10,4 +10,5 @@ services:
       - NODE_ENV=production
       - DISQUS_URL=https://jetboardlimited.disqus.com/embed.js
       - SERVER_HOST_URL=https://jetboardlimited.com
+    restart: always
     command: npm start
