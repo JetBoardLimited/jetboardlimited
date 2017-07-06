@@ -9,6 +9,7 @@ services:
     environment:
       - DEBUG=jetboardlimited:*
       - NODE_ENV=development
+      - FORUM_URL=http://localhost:4567
       - DISQUS_URL=https://jetboardlimited.disqus.com/embed.js
       - SERVER_HOST_URL=http://localhost:8080
     volumes:
