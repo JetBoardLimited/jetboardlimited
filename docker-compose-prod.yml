@@ -44,7 +44,7 @@ services:
       - VIRTUAL_HOST=forum.jetboardlimited.com
       - VIRTUAL_NETWORK=nginx-proxy
       - VIRTUAL_PORT=4567
-      - LETSENCRYPT_HOST=jetboardlimited.com
+      - LETSENCRYPT_HOST=forum.jetboardlimited.com
       - LETSENCRYPT_EMAIL=jankarlo.delacruz@gmail.com
 
   web:
