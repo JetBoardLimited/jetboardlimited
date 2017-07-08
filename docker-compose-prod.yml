@@ -10,7 +10,7 @@ services:
     restart: always
     environment:
       - NODE_ENV=production
-      - FORUM_URL=https://jetboardlimited.com/forum
+      - FORUM_URL=http://forum.jetboardlimited.com
       - DISQUS_URL=https://jetboardlimited.disqus.com/embed.js
-      - SERVER_HOST_URL=https://jetboardlimited.com
+      - SERVER_HOST_URL=http://jetboardlimited.com
     command: npm start
