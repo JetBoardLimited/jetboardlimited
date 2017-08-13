@@ -1,3 +1,5 @@
-docker cp ./data/forum/config.json jbl-forum:/nodebb/config.json
-docker cp ./data/forum/uploads jbl-forum:/nodebb/uploads
-docker cp ./data/redis jbl-redis:/data
+mkdir -p ./data
+
+docker cp ./data/config.json jbl-forum:/nodebb
+docker cp ./data/uploads jbl-forum:/nodebb
+docker cp ./data/dump.rdb jbl-redis:/data
