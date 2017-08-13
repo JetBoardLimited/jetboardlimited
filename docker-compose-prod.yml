@@ -5,6 +5,8 @@ services:
     restart: always
     environment:
       - NODE_ENV=production
+    ports:
+      - 25:25
 
   web:
     restart: always
