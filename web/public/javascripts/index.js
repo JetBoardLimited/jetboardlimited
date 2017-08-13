@@ -35,7 +35,7 @@ function animateManufacturersList() {
 function createBoardMediaGallery() {
     $('.intro-boards-gallery').slick({
         autoplay: true,
-        autoplaySpeed: 500,
+        autoplaySpeed: 3000,
         centerMode: true,
         slidesToShow: 5
    });
