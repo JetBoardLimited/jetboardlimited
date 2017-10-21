@@ -4,6 +4,7 @@ services:
   forum:
     environment:
       - NODE_ENV=development
+      - FORUM_URL=http://localhost:4567
 
   web:
     environment:
