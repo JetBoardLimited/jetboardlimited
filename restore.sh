@@ -1,4 +1,5 @@
 mkdir -p ./data
 
-docker cp ./data/nodebb jbl-forum:/
+docker cp ./data/config.json jbl-forum:/nodebb
+docker cp ./data/uploads jbl-forum:/nodebb
 docker cp ./data/dump.rdb jbl-redis:/data
