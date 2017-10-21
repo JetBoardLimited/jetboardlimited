@@ -1,0 +1,11 @@
+{
+    "url": "$FORUM_URL",
+    "secret": "$COOKIE_SECRET",
+    "database": "redis",
+    "port": 4567,
+    "redis": {
+        "host": "redis",
+        "port": "6379",
+        "database": "0"
+    }
+}
