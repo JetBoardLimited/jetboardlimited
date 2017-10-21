@@ -1,7 +1,7 @@
-FROM node:6.9-alpine
+FROM node:6-alpine
 
 WORKDIR /node
-COPY package.json ./
-RUN npm install && npm cache clean
+COPY package.json .
+RUN yarn install --pure-lockfile --non-interactive && yarn cache clean
 COPY . .
-RUN npm run build 
+RUN npm run build
