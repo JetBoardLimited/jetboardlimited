@@ -20,7 +20,9 @@ tar -czf "./data/backup-$(date +%F_%R).tar.gz" -C $TMPDIR .
 echo "Updating source..."
 git pull origin
 
+
 echo "Starting containers..."
+docker-compose down
 docker-compose -f docker-compose.yml -f docker-compose-${@}.yml up -d
 
 echo "Restoring data..."
